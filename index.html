@@ -1,0 +1,176 @@
+<html>
+<head>
+	<title>Interfaith Partners In Action</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<style>
+		body {
+			font-size: 14px;
+			font-family: 'Lora', serif;
+			margin: 0;
+		}
+		header {
+			font-family: 'Oswald',sans-serif;
+		}
+		h1 {
+			font-size: 1.1rem;
+			font-weight: 700;
+			background-color: #9c76b3;
+			margin: 0;
+			padding: 0.5rem 2rem;
+			color: #fff;
+			text-shadow: 2px 2px #000;
+		}
+		aside {
+			text-decoration: italic;
+			font-weight: 300;
+			margin: 0;
+			padding: 0.5rem 2rem;
+		}
+		#main {
+			position: relative;
+			height: 100%;
+		}
+		#letter {
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align:justify;
+			transition: transform 0.5s ease;
+			width: 100%;
+			background-color: #fff;
+			overflow-y: auto;
+			height: 100%;
+			z-index: 100;
+			box-shadow: -20px 0px 20px 20px #000;
+		}
+
+		form {
+			position: absolute;
+			top: 0;
+			right: .5rem;
+			width: calc(90% - 1rem);
+			z-index: 99;
+			visibility: hidden;
+			transition: visibility 0.5s;
+			height: 100%;
+			overflow: auto;
+		}
+
+		input[type=text], input[type=email], textarea {
+			display: block;
+			width: 100%;
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+			font-family: 'Shadows Into Light Two', cursive;
+		}
+
+		label {
+			display: block;
+			margin-top: 2rem;
+		}
+
+		#letter p {
+			margin: 1rem;
+		}
+		#main[data-show=form] #letter {
+			transform: translateX(-90%);
+			overflow-y: hidden;
+		}
+		#main[data-show=form] form {
+			visibility: visible;
+		}
+
+		button, input[type=submit] {
+			width: 100%;
+			display: block;
+			height: 3rem;
+			margin: 1rem auto;
+			font-size: 1.1rem;
+			font-weight: 700;
+		}
+
+		button {
+			position: relative;
+			width: calc(95% - 2.1213rem);
+			margin-left: 5%;
+			background-color: #8fca70;
+			border: none;
+			border-top-left-radius:0.2rem;
+			border-bottom-left-radius:0.2rem;
+			padding-left: 2.5%;
+			font-family: 'Oswald',sans-serif;
+		}
+
+		button:after {
+			position: absolute;
+			left: calc(100% - 1rem);
+			content: "";
+			width: 2.1213rem;
+			height: 2.1213rem;
+			background-color: #8fca70;
+			top: 0.4393rem;
+			transform: rotate(45deg);
+			border-top-right-radius: 0.2rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="main" data-show="letter">
+	<section id="letter">
+		<header>
+			<h1>Interfaith Partners In Action</h1>
+			<aside>A Multifaith Letter in Support of Presbyterian Divestment from Companies Profiting from Occupation</aside>
+		</header>
+
+		<p>The Presbyterian Church (U.S.A.) will decide this Summer at its biennial General Assembly in Detroit (June 14-21, 2014) whether or not to stop investing in Caterpillar, Motorola Solutions, and Hewlett-Packard companies that profit from the Israeli occupation. This proposal comes from the grassroots of the church as well as having been recommended by the church's Mission Responsibility Through Investment Committee, the body of the church that implements the socially-responsible investment policies of the church.</p>
+
+		<p>We represent religious leaders, lay people and clergy from different faith-rooted traditions who support the Presbyterian Church in its quest to align its prophetic principles with actions that support the end of Israeli Occupation. We endorse the overtures that support boycott and divestment.</p>
+
+		<p>We share a belief in the central teachings of our respective religious traditions that mandate proactive nonviolent responses to systematic harming of fellow human beings. No human being is outside the circle of our concern. We fully support religious institutions that divest from corporations that profit from the construction of illegal Israeli settlements and barriers on Palestinian land in East Jerusalem and the West Bank. A religious community that proclaims justice and peace as its primary mission cannot accept funds from corporations that help maintain the vast system of repression used to occupy Palestinian land and harm Palestinian society.</p>
+
+		<button>Sign Petition</button>
+	</section>
+	<form action="../../../../../action/wrapperProcessAction2.jsp" method="POST" onsubmit="return submitForm(this);" name="actionForm" autocomplete="off">
+		<label for="f1">First Name</label>
+		<input title="First Name" id="f1" name="First_Name" type="text" required="">
+
+		<label for="f2">Last Name</label>
+		<input title="Last Name" id="f2" name="Last_Name" type="text" required="">
+
+		<label for="f3">Email</label>
+		<input title="Email" id="f3" name="Email" type="email" required="">
+
+		<label for="f4">Title</label>
+		<input class="blockInput" id="f4" name="interfaith_title" type="text">
+
+		<label for="f5">Faith-rooted affiliation (denomination, congregation, or communal organization)</label>
+		<textarea id="f5" name="interfaith_affiliation" required=""></textarea>
+
+
+		<input name="first_name_301" type="hidden" value="">
+		<input name="action_KEY" value="15716" type="hidden">
+		<input name="organization_KEY" value="301" type="hidden">
+		<input name="PRIVATE_Zip_Plus_4" value="" type="hidden">
+		<input name="table" value="supporter" type="hidden">
+		<input name="key" value="0" type="hidden">
+		<input name="required" value="First_Name,Last_Name,Email,interfaith_affiliation," type="hidden">
+		<input name="email_trigger_KEYS" value="23823" type="hidden">
+		<input name="link" value="action" type="hidden">
+		<input name="linkKey" value="15716" type="hidden">
+		<input name="targetsJSON" value="[]" type="hidden">
+		<input name="contentJSON" value="{&quot;16880&quot;:{&quot;action_content_detail_KEY&quot;:&quot;18920&quot;,&quot;organization_KEY&quot;:&quot;301&quot;,&quot;chapter_KEY&quot;:&quot;0&quot;,&quot;action_content_KEY&quot;:&quot;16880&quot;,&quot;Recommended_Subject&quot;:&quot;(No Petition Subject)&quot;,&quot;Recommended_Content&quot;:&quot;The Presbyterian Church (U.S.A.) will decide this Summer at its biennial General Assembly in Detroit (June 14-21, 2014) whether or not to stop investing in Caterpillar, Motorola Solutions, and Hewlett-Packard–3 companies that profit from the Israeli occupation. This proposal comes from the grassroots of the church as well as having been recommended by the church’s Mission Responsibility Through Investment Committee, the body of the church that implements the socially-responsible investment policies of the church.\r\n\r\nWe represent religious leaders, lay people and clergy from different faith-rooted traditions who support the Presbyterian Church in its quest to align its prophetic principles with actions that support the end of Israeli Occupation. We endorse the overtures that support boycott and divestment.\r\n\r\nWe share a belief in the central teachings of our respective religious traditions that mandate proactive nonviolent responses to systematic harming of fellow human beings. No human being is outside the circle of our concern. We fully support religious institutions that divest from corporations that profit from the construction of illegal Israeli settlements and barriers on Palestinian land in East Jerusalem and the West Bank. A religious community that proclaims justice and peace as its primary mission cannot accept funds from corporations that help maintain the vast system of repression used to occupy Palestinian land and harm Palestinian society.\r\n&quot;,&quot;Fixed_Subject_BOOLVALUE&quot;:&quot;false&quot;,&quot;Fixed_Subject&quot;:false,&quot;Fixed_Content_BOOLVALUE&quot;:&quot;false&quot;,&quot;Fixed_Content&quot;:false,&quot;key&quot;:&quot;18920&quot;,&quot;object&quot;:&quot;action_content_detail&quot;,&quot;Name&quot;:&quot;Petition Content&quot;}}" type="hidden">
+
+		<input name="submit" value="Submit" class="submit" type="submit">
+		</form>
+		</div>
+		<script>
+			document.querySelector('#letter').addEventListener('click',
+				function(e) {
+					document.getElementById('main').dataset.show =
+					(e.target instanceof HTMLButtonElement) ? 'form' : 'letter';
+				})
+		</script>
+		</body>
+</html>
