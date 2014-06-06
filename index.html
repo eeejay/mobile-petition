@@ -218,8 +218,8 @@
 
 			var loc = document.location.toString();
 			document.querySelector('input[name=redirect]').value =
-			  (document.location.hash ? loc.substr(0,loc.indexOf('#')) : loc)
-			   + '#submitted';
+			  (document.location.hash ? loc.substr(0,loc.indexOf('#')) : loc);
+			   // + '#submitted';
 
 			Modernizr.load({
 				test: Modernizr.input.required,
