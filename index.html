@@ -217,8 +217,8 @@
 				})
 
 			var loc = document.location.toString();
-			document.querySelector('input[name=redirect]').value =
-			  (document.location.hash ? loc.substr(0,loc.indexOf('#')) : loc);
+			document.querySelector('input[name=redirect]').value = 'foo.html'
+			  // (document.location.hash ? loc.substr(0,loc.indexOf('#')) : loc);
 			   // + '#submitted';
 
 			Modernizr.load({
