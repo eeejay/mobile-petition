@@ -4,14 +4,13 @@
 	<meta name="viewport" content="width=320, user-scalable=no">
 	<link href='http://fonts.googleapis.com/css?family=Oswald:300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bower_components/better-form-validation/dist/better-form-validation.css"/>
 	<style>
 		body {
 			font-size: 14px;
 			font-family: 'Lora', serif;
 			margin: 0;
-			//-webkit-text-size-adjust: 100%;
 		}
 		header {
 			font-family: 'Oswald',sans-serif;
@@ -68,7 +67,7 @@
 			width: 100%;
 			font-size: 1.5rem;
 			margin-bottom: 0.5rem;
-			font-family: 'Shadows Into Light Two', cursive;
+			font-family: 'Open Sans', sans-serif;
 		}
 
 		input.valid, input.invalid {
@@ -77,7 +76,11 @@
 
 		label {
 			display: block;
-			margin-top: 2rem;
+			margin-top: 1.5rem;
+		}
+
+		label:first-child {
+			margin-top: 0.5rem;
 		}
 
 		#letter p {
@@ -99,6 +102,14 @@
 			margin: 1rem auto;
 			font-size: 1.1rem;
 			font-weight: 700;
+			font-family: 'Oswald',sans-serif;
+		}
+
+		input[type=submit] {
+			border-radius: 0.2rem;
+			background-color: #9c76b3;
+			border: none;
+			color: #fff;
 		}
 
 		button {
@@ -110,7 +121,6 @@
 			border-top-left-radius:0.2rem;
 			border-bottom-left-radius:0.2rem;
 			padding-left: 2.5%;
-			font-family: 'Oswald',sans-serif;
 		}
 
 		button:after {
@@ -156,7 +166,7 @@
 		<label for="f4">Title</label>
 		<input class="blockInput" id="f4" name="interfaith_title" type="text">
 
-		<label for="f5">Faith-rooted affiliation (denomination, congregation, or communal organization)</label>
+		<label for="f5">Faith-rooted affiliation <small>(denomination, congregation, or communal organization)</small></label>
 		<textarea id="f5" name="interfaith_affiliation" required=""></textarea>
 
 
@@ -175,14 +185,19 @@
 		<input name="submit" value="Submit" class="submit" type="submit">
 		</form>
 		</div>
+		<script src="modernizr.custom.55431.js"></script>
 		<script>
 			document.querySelector('#letter').addEventListener('click',
 				function(e) {
 					document.getElementById('main').dataset.show =
 					(e.target instanceof HTMLButtonElement) ? 'form' : 'letter';
 				})
+
+			Modernizr.load({
+				test: Modernizr.input.required,
+				nope : ['bower_components/better-dom/dist/better-dom.js',
+				        'bower_components/better-form-validation/dist/better-form-validation.js']
+			});
 		</script>
-		<script src="bower_components/better-dom/dist/better-dom.js"></script>
-		<script src="bower_components/better-form-validation/dist/better-form-validation.js"></script>
 		</body>
 </html>
