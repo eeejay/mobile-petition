@@ -1,0 +1,36 @@
+{
+  "name": "better-form-validation",
+  "version": "1.3.2",
+  "main": [
+    "dist/better-form-validation.js",
+    "dist/better-form-validation.css",
+    "i18n/better-form-validation.ru.js"
+  ],
+  "ignore": [
+    ".*",
+    "test",
+    "src",
+    "index.html",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json",
+    "main.sublime-project"
+  ],
+  "keywords": [
+    "better-dom"
+  ],
+  "dependencies": {
+    "better-dom": "~1.7.5"
+  },
+  "homepage": "https://github.com/chemerisuk/better-form-validation",
+  "_release": "1.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.3.2",
+    "commit": "b6e980f54ee0b9fcced8568794dbcf1a1b24f4d8"
+  },
+  "_source": "git://github.com/chemerisuk/better-form-validation.git",
+  "_target": "~1.3.2",
+  "_originalSource": "better-form-validation",
+  "_direct": true
+}
