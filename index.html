@@ -137,9 +137,30 @@
 			-webkit-transform: rotate(45deg);
 			border-top-right-radius: 0.2rem;
 		}
+
+		#submitted {
+			display: none;
+			width: 75%;
+			margin: auto;
+			text-align: center;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 1.5rem;
+		}
+
+		#submitted:target {
+			display: block;
+		}
+
+		#submitted:target + #main {
+			display: none;
+		}
 	</style>
 </head>
 <body>
+	<div id="submitted">
+		<p>Great, thanks.</p>
+		<a href="#">Back to petition</a>
+	</div>
 	<div id="main" data-show="letter">
 	<section id="letter">
 		<header>
@@ -194,6 +215,11 @@
 					document.getElementById('main').dataset.show =
 					(e.target instanceof HTMLButtonElement) ? 'form' : 'letter';
 				})
+
+			var loc = document.location.toString();
+			document.querySelector('input[name=redirect]').value =
+			  (document.location.hash ? loc.substr(0,loc.indexOf('#')) : loc)
+			   + '#submitted';
 
 			Modernizr.load({
 				test: Modernizr.input.required,
